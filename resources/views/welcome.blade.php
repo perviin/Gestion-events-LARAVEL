@@ -16,7 +16,7 @@
     </style>
 </head>
 <body class="font-poppins">
-    <!-- Barre de navigation -->
+    <!-- navbar -->
     <nav class="fixed top-0 w-full bg-black bg-opacity-70 text-white p-4 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-2xl font-bold"><a href="#">Evently</a></div>
@@ -30,7 +30,7 @@
         </div>
     </nav>
 
-    <!-- Section Hero -->
+    <!-- accueil -->
     <section class="hero-section flex items-center justify-center">
         <div class="bg-black bg-opacity-50 p-10 rounded-lg text-center text-white">
             <h1 class="text-5xl font-bold mb-4">Bienvenue sur Evently</h1>
@@ -41,7 +41,7 @@
         </div>
     </section>
 
-    <!-- Section À propos -->
+    <!-- à propos -->
     <section id="apropos" class="bg-white py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">À propos d'Evently</h2>
@@ -61,13 +61,13 @@
         </div>
     </section>
 
-    <!-- Section Services -->
+    <!-- services -->
     <section id="services" class="bg-gray-100 py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Nos Services</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
+
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                     <div class="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -80,7 +80,6 @@
                     </p>
                 </div>
                 
-                <!-- Service 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                     <div class="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,23 +92,22 @@
                     </p>
                 </div>
                 
-                <!-- Service 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                     <div class="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
-                        <div class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <img src="img/qr-code.svg" alt="qr-code" color="white">
-                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                        </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-center mb-2">QR code</h3>
+                    <h3 class="text-xl font-semibold text-center mb-2">Accès permanent</h3>
                     <p class="text-gray-600 text-center">
-                        Utilisation de QR Code unique pour avoir un accès protégés à vos évènements favoris !
+                        Consultez et gérez vos événements en tout temps, où que vous soyez, grâce à notre plateforme accessible sur tous vos appareils !
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Contact -->
+    <!-- contact -->
     <section id="contact" class="bg-white py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Contactez-nous</h2>
@@ -136,7 +134,7 @@
         </div>
     </section>
 
-    <!-- Footer avec Mentions légales -->
+    <!-- footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between">
