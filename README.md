@@ -41,8 +41,8 @@ Une application web permettant aux utilisateurs de consulter des événements et
     
 
 ```
-git clone https://github.com/ton-utilisateur/nom-du-projet.git
-cd nom-du-projet
+git clone https://github.com/perviin/Gestion-events-Laravel.git
+cd Gestion-events-Laravel
 ```
 
 2.  **Installer les dépendances PHP**
