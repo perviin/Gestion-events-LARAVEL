@@ -1,25 +1,25 @@
-# Utilisation d'une image officielle de PHP
-FROM php:8.0-fpm
+# Utilisation de l'image PHP avec Apache
+FROM php:8.1-apache
 
-# Installer les dépendances système requises
-RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev zip git unzip \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd
+# Installer les extensions PHP nécessaires pour Laravel
+RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev libzip-dev unzip git && \
+    docker-php-ext-configure gd --with-freetype --with-jpeg && \
+    docker-php-ext-install gd pdo pdo_mysql zip
 
-# Installer Composer (gestionnaire de dépendances PHP)
+# Installation de Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Définir le répertoire de travail
-WORKDIR /var/www
+# Configuration du répertoire de travail
+WORKDIR /var/www/html
 
-# Copier tous les fichiers du projet dans le conteneur
+# Copier les fichiers de l'application Laravel dans l'image Docker
 COPY . .
 
-# Exécuter Composer pour installer les dépendances du projet
+# Installer les dépendances de Composer
 RUN composer install --no-dev --optimize-autoloader
 
-# Exposer le port 80 pour servir l'application
+# Exposer le port 80
 EXPOSE 80
 
-# Lancer PHP-FPM (serveur web PHP)
-CMD ["php-fpm"]
+# Lancer Apache
+CMD ["apache2-foreground"]
