@@ -8,12 +8,13 @@ services:
       - key: DB_CONNECTION
         value: mysql
       - key: DB_HOST
-        value: mysql-production-xyz.up.railway.app # Change ça avec l'URL de ta DB sur Railway
+        value: mysql.railway.internal
       - key: DB_PORT
         value: 3306
       - key: DB_DATABASE
-        value: railway # Change ça avec ton nom de base de données
+        value: railway
       - key: DB_USERNAME
         value: root
       - key: DB_PASSWORD
-        value: "ton_mot_de_passe"  # Ton mot de passe MySQL
+        value: pxBcprlOMGPNTxkRSsvwLjPlcWAluuAo 
+      #utilisation de railway et ses variables
