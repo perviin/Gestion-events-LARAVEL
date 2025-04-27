@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: laravel-app
+    env: docker
+    buildCommand: docker build -t laravel-app .
+    startCommand: docker run -d -p 80:80 laravel-app
+    envVars:
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        value: mysql-production-xyz.up.railway.app # Change ça avec l'URL de ta DB sur Railway
+      - key: DB_PORT
+        value: 3306
+      - key: DB_DATABASE
+        value: railway # Change ça avec ton nom de base de données
+      - key: DB_USERNAME
+        value: root
+      - key: DB_PASSWORD
+        value: "ton_mot_de_passe"  # Ton mot de passe MySQL
